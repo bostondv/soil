@@ -206,3 +206,15 @@ function soil_request_filter($query_vars) {
   return $query_vars;
 }
 add_filter('request', 'soil_request_filter');
+
+/**
+ * Set low priorty for WordPress SEO metabox
+ */
+add_filter( 'wpseo_metabox_prio', function() {
+  return 'low';
+});
+
+/**
+ * Remove WordPress SEO columns
+ */
+add_filter( 'wpseo_use_page_analysis', '__return_false' );
