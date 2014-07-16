@@ -227,36 +227,3 @@ function soil_remove_script_version( $src ){
 }
 add_filter( 'script_loader_src', 'soil_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', 'soil_remove_script_version', 15, 1 );
-
-/**
- * Load gravity forms in the footer
- */
-add_filter( 'gform_init_scripts_footer', '__return_true' );
-
-/**
- * Disable gravity forms css
- */
-function soil_remove_gravityforms_style() {
-  global $wp_styles;
-  if( count($wp_styles->registered['gforms_reset_css']) ) {
-    unset( $wp_styles->registered['gforms_reset_css'] );
-  }
-  if( count($wp_styles->registered['gforms_formsmain_css']) ) {
-    unset( $wp_styles->registered['gforms_formsmain_css'] );
-  }
-  if( count($wp_styles->registered['gforms_ready_class_css']) ) {
-    unset( $wp_styles->registered['gforms_ready_class_css'] );
-  }
-  if( count($wp_styles->registered['gforms_browsers_css']) ) {
-    unset( $wp_styles->registered['gforms_browsers_css'] );
-  }
-  if( count($wp_styles->registered['gforms_datepicker_css']) ) {
-    unset( $wp_styles->registered['gforms_datepicker_css'] );
-  }
-}
-add_action( 'gform_enqueue_scripts', 'soil_remove_gravityforms_style' );
-
-/**
- * Disable tablepress css
- */
-add_filter( 'tablepress_use_default_css', '__return_false' );
