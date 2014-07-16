@@ -238,19 +238,19 @@ add_filter( 'gform_init_scripts_footer', '__return_true' );
  */
 function soil_remove_gravityforms_style() {
   global $wp_styles;
-  if ( isset($wp_styles->registered['gforms_reset_css']) ) {
+  if( count($wp_styles->registered['gforms_reset_css']) ) {
     unset( $wp_styles->registered['gforms_reset_css'] );
   }
-  if ( isset($wp_styles->registered['gforms_formsmain_css']) ) {
+  if( count($wp_styles->registered['gforms_formsmain_css']) ) {
     unset( $wp_styles->registered['gforms_formsmain_css'] );
   }
-  if ( isset($wp_styles->registered['gforms_ready_class_css']) ) {
+  if( count($wp_styles->registered['gforms_ready_class_css']) ) {
     unset( $wp_styles->registered['gforms_ready_class_css'] );
   }
-  if ( isset($wp_styles->registered['gforms_browsers_css']) ) {
+  if( count($wp_styles->registered['gforms_browsers_css']) ) {
     unset( $wp_styles->registered['gforms_browsers_css'] );
   }
-  if ( isset($wp_styles->registered['gforms_datepicker_css']) ) {
+  if( count($wp_styles->registered['gforms_datepicker_css']) ) {
     unset( $wp_styles->registered['gforms_datepicker_css'] );
   }
 }
