@@ -1,5 +1,5 @@
 {
-  "name": "roots/soil",
+  "name": "bostondv/soil",
   "type": "wordpress-plugin",
   "license": "MIT",
   "description": "Clean up WordPress markup, relative URLs, nice search",
@@ -20,7 +20,7 @@
     "wordpress"
   ],
   "support": {
-    "issues": "https://github.com/roots/soil/issues",
+    "issues": "https://github.com/bostondv/soil/issues",
     "forum": "http://discourse.roots.io/"
   },
   "require": {
