@@ -218,12 +218,3 @@ add_filter( 'wpseo_metabox_prio', function() {
  * Remove WordPress SEO columns
  */
 add_filter( 'wpseo_use_page_analysis', '__return_false' );
-
-/**
- * Remove version query string from all styles and scripts
- */
-function soil_remove_script_version( $src ){
-  return remove_query_arg( 'ver', $src );
-}
-add_filter( 'script_loader_src', 'soil_remove_script_version', 15, 1 );
-add_filter( 'style_loader_src', 'soil_remove_script_version', 15, 1 );
