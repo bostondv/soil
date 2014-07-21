@@ -43,3 +43,11 @@ Remove trackback / pingback functionality entirely with:
 ```php
 add_theme_support('soil-disable-trackbacks');
 ```
+
+### Disable Asset Versioning
+
+Disable `ver` query string from all styles and scripts with:
+
+```php
+add_theme_support('soil-disable-asset-versioning');
+```
